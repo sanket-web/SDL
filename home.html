@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            #top, #bottom, #left, #right 
+            {
+                background:#b3b4b3;
+                position: fixed;
+            }
+            #left, #right 
+            {
+                top: 0; bottom: 0;
+                width: 15px;
+            }
+            #left { left: 0; }
+            #right { right: 0; }	
+            #top, #bottom 
+            {
+                left: 0; right: 0;
+                height: 15px;
+            }
+            #top { top: 0; }
+            #bottom { bottom: 0; }
+                
+            #container { padding:20px;}  
+            
+            * {box-sizing: border-box;}
+
+            body 
+            { 
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .header 
+            {
+                overflow: hidden;
+                background-color: #323140;
+                padding: 20px 10px;
+            }
+
+            .header a 
+            {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px; 
+                line-height: 25px;
+                border-radius: 4px;
+            }
+
+            .header a.logo 
+            {
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .header a:hover 
+            {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .header a.active 
+            {
+                background-color: dodgerblue;
+                color: white;
+            }
+
+            .header-right { float: right; }
+
+            .header .search-container { float: right; }
+
+            .header input[type=text] 
+            {
+                padding: 6px;
+                margin-top: 8px;
+                font-size: 17px;
+                border: none;
+            }
+
+            .header .search-container button 
+            {
+                float: right;
+                padding: 6px 10px;
+                margin-top: 8px;
+                margin-right: 16px;
+                background: #ddd;
+                font-size: 17px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .header .search-container button:hover { background: #ccc; }
+
+            @media screen and (max-width: 600px) 
+            {
+                .header .search-container { float: none; }
+
+                .header a, .header input[type=text], .header .search-container button 
+                {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0;
+                    padding: 14px;
+                }
+
+                .header input[type=text] { border: 1px solid #ccc; }
+
+                .header-right { float: none; }
+            }
+        </style>
+    </head>
+
+    <body style="background-color:#3c3b4d;" >
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="top"></div>
+        <div id="bottom"></div>
+        
+        <div class="header" id='container' style="padding-left:20px">
+            <a href="#default" class="logo">CompanyLogo</a>
+            <div class="header-right">
+                <a class="fab fa-facebook-f"></a>
+                <a class="fab fa-twitter"></a>
+                <a class="fab fa-instagram"></a>
+                <a class="fab fa-linkedin-in"></a>
+                <a class="active" href="#chat">Chat</a>
+                <a href="#login">Login</a>
+                <a class="fas fa-bars"></a>
+                <div class="search-container">
+                    <div class='header-right'>
+                        <form >
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding-left:20px;color:rgb(198, 234, 234);">
+            <h1>Responsive Header</h1>
+            <p>Resize the browser window to see the effect.</p>
+            <p>Some content..</p>
+        </div>
+    </body>
+</html>
