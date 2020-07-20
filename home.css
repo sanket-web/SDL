@@ -1,7 +1,7 @@
 /* fixed border around webpage */
 #top, #bottom, #left, #right 
 {
-    background:#b3b4b3;
+    background:#a0a1a0;
     position: fixed;
 }
 #left, #right 
@@ -99,6 +99,8 @@
 
 .header .search-container button:hover { background: #ccc; }
 
+/* image slideshow */
+.mySlides {display:none;}
 
 /* for small screen */
 @media screen and (max-width: 600px) 
